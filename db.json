@@ -7,16 +7,10 @@
       "description": "Back in print for the first time in nearly thirty years, here is Yoko Ono's whimsical, delightful, subversive, startling book of instructions for art and for life. 'Burn this book after you've read it.' -- Yoko 'A dream you dream alone may be a dream, but a dream two people dream together is a reality. This is the greatest book I've ever burned.' -- John",
       "author": "Yoko Ono",
       "img_url": "https://books.google.com/books/content?id=3S8Rwr-iBdoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "users": [
-        {
-          "id": 2,
-          "username": "auer"
-        },
-        {
-          "id": 8,
-          "username": "maverick"
-        }
-      ]
+      "users": {
+        "id": 11,
+        "username": "sam"
+      }
     },
     {
       "id": 2,
@@ -25,24 +19,10 @@
       "description": "Data is fundamental to the modern world. From economic development, to healthcare, to education and public policy, we rely on numbers to allocate resources and make crucial decisions. But because so much data fails to take into account gender, because it treats men as the default and women as atypical, bias and discrimination are baked into our systems. And women pay tremendous costs for this bias, in time, money, and often with their lives.",
       "author": "Caroline Criado Perez",
       "img_url": "https://books.google.com/books/content?id=GdmEDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "users": [
-        {
-          "id": 10,
-          "username": "macejkovic"
-        },
-        {
-          "id": 4,
-          "username": "ann"
-        },
-        {
-          "id": 6,
-          "username": "steuber"
-        },
-        {
-          "id": 1,
-          "username": "pouros"
-        }
-      ]
+      "users": {
+        "id": 11,
+        "username": "sam"
+      }
     },
     {
       "id": 3,
@@ -51,16 +31,10 @@
       "description": "In I’m Telling the Truth, but I’m Lying Bassey Ikpi explores her life—as a Nigerian-American immigrant, a black woman, a slam poet, a mother, a daughter, an artist—through the lens of her mental health and diagnosis of bipolar II and anxiety. Her remarkable memoir in essays implodes our preconceptions of the mind and normalcy as Bassey bares her own truths and lies for us all to behold with radical honesty and brutal intimacy.",
       "author": "Bassey Ikpi",
       "img_url": "https://books.google.com/books/content?id=nHlbDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "users": [
-        {
-          "id": 8,
-          "username": "maverick"
-        },
-        {
-          "id": 9,
-          "username": "alex"
-        }
-      ]
+      "users": {
+        "id": 11,
+        "username": "sam"
+      }
     },
     {
       "id": 4,
@@ -68,16 +42,10 @@
       "description": "Her own powerful story up to 1972, told with warmth, brilliance, humor and conviction. With an introduction by the author.",
       "author": "Angela Y. Davis ",
       "img_url": "http://books.google.com/books/content?id=S3yODQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "users": [
-        {
-          "id": 10,
-          "username": "macejkovic"
-        },
-        {
-          "id": 8,
-          "username": "maverick"
-        }
-      ]
+      "users": {
+        "id": 11,
+        "username": "sam"
+      }
     },
     {
       "id": 5,
@@ -86,20 +54,10 @@
       "description": "Pocket Change Collective was born out of a need for space. Space to think. Space to connect. Space to be yourself. And this is your invitation to join us. 'Thank God we have Alok. And I'm learning a thing or two myself'--Billy Porter, Emmy award-winning actor, singer, and Broadway theater performer",
       "author": "Alok Vaid-Menon",
       "img_url": "https://books.google.com/books/content?id=hxGuDwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
-      "users": [
-        {
-          "id": 10,
-          "username": "macejkovic"
-        },
-        {
-          "id": 4,
-          "username": "ann"
-        },
-        {
-          "id": 8,
-          "username": "maverick"
-        }
-      ]
+      "users": {
+        "id": 11,
+        "username": "sam"
+      }
     },
     {
       "id": 6,
@@ -110,12 +68,8 @@
       "img_url": "https://books.google.com/books/content?id=54vbDgAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api",
       "users": [
         {
-          "id": 7,
-          "username": "steuber"
-        },
-        {
-          "id": 4,
-          "username": "ann"
+          "id": 11,
+          "username": "sam"
         }
       ]
     },
@@ -128,12 +82,8 @@
       "img_url": "http://books.google.com/books/content?id=FLFoDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
-          "id": 3,
-          "username": "marvin"
-        },
-        {
-          "id": 5,
-          "username": "feels-like-summer"
+          "id": 11,
+          "username": "sam"
         }
       ]
     },
@@ -146,16 +96,8 @@
       "img_url": "http://books.google.com/books/content?id=EtVfCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
-          "id": 9,
-          "username": "alex"
-        },
-        {
-          "id": 3,
-          "username": "marvin"
-        },
-        {
-          "id": 2,
-          "username": "auer"
+          "id": 11,
+          "username": "sam"
         }
       ]
     },
@@ -168,16 +110,8 @@
       "img_url": "http://books.google.com/books/content?id=8thMLkahggcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
-          "id": 8,
-          "username": "maverick"
-        },
-        {
-          "id": 6,
-          "username": "steuber"
-        },
-        {
-          "id": 5,
-          "username": "feels-like-summer"
+          "id": 11,
+          "username": "sam"
         }
       ]
     },
@@ -188,16 +122,10 @@
       "description": "This stirring love story is a profoundly insightful look into the hearts and minds of three people who are at once bound and separated by forces beyond their control. An American Marriage is a masterpiece of storytelling, an intimate look deep into the souls of people who must reckon with the past while moving forward—with hope and pain—into the future.",
       "author": "Tayari Jones",
       "img_url": "http://books.google.com/books/content?id=fc8PDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "users": [
-        {
-          "id": 8,
-          "username": "maverick"
-        },
-        {
-          "id": 10,
-          "username": "macejkovic"
-        }
-      ]
+      "users": {
+        "id": 11,
+        "username": "sam"
+      }
     },
     {
       "id": 11,
