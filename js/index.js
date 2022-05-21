@@ -1,5 +1,5 @@
-// TODO: Fix flaw where it's not adding 'sam' to books that aren't liked by him already
-// TODO: Fix flaw where 'sam' is still being added even if the same username is present
+// Attempted this lab, moving on:
+// "LIKE" button functionality does NOT work, but most of the lab is complete
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOMContentLoaded event");
@@ -96,32 +96,15 @@ function showDetails(e) {
 
         // TODO: Implement a for loop so that if we are dealing with an array of objects, then use '.forEach()' accordingly:
         // console.log("usersList.isArray(): ", usersList.isArray());
-        if (!usersList.length) {
-          console.log("usersList is NOT an array, creating an array...");
 
-          let newArray = [];
-          newArray.push(usersList);
-          usersList = newArray;
+        usersList.forEach((user) => {
+          let userLi = document.createElement("li");
+          let username = user.username;
+          userLi.textContent = username;
+          usersListUl.append(userLi);
+        });
 
-          usersList.forEach((user) => {
-            let userLi = document.createElement("li");
-            let username = user.username;
-            userLi.textContent = username;
-            usersListUl.append(userLi);
-          });
-
-          console.log("usersList after creating a new array: ", usersList);
-        }
-        else if (usersList.length) {
-          console.log("usersLists IS an array, adding new user to it...");
-          console.log("usersList.length: ", usersList.length);
-          usersList.forEach((user) => {
-            let userLi = document.createElement("li");
-            let username = user.username;
-            userLi.textContent = username;
-            usersListUl.append(userLi);
-          });
-        }
+        console.log("usersList after creating a new array: ", usersList);
         likeButton.addEventListener("click", likeButtonClick);
 
         showPanelDiv.append(bookThumbnailImage, brTag, bookTitleHeader, brTag, bookAuthorHeader, brTag, bookDescriptionParagraph, brTag, usersListUl, brTag, likeButton);
@@ -146,18 +129,49 @@ function likeButtonClick(e) {
 
   // Update the 'likeList' on the page itself:
   let likeButton = document.querySelector("#likeButton");
-  let likeList = e.target.parentNode.children[4];
-  let newUserLi = document.createElement("li");
+  let likeUl = e.target.parentNode.children[4];
   let newUsername = "sam";
 
   // Rip the 'bookId' from the 'title' header:
   let bookId = e.target.parentNode.children[1].id;
-  let usersArray = [];
-
   let usersListUl = document.querySelector("#usersListUl");
+  let likeLis = likeUl.querySelectorAll("li");
+  let filteredLikeLis = [];
 
-  newUserLi.textContent = newUsername;
-  likeList.append(newUserLi);
+  console.log("likeUl: ", likeUl);
+
+  likeLis.forEach((li) => {
+    console.log("li.textContent: ", li.textContent);
+    filteredLikeLis.push(li.textContent);
+  });
+
+  console.log("filteredLikeLis: ", filteredLikeLis);
+
+  console.log("typeof(filteredLikeLis): ", typeof(filteredLikeLis));
+
+  filteredLikeLis = filteredLikeLis.filter((li) => {
+    console.log("Inside .filter() function for filteredLikeLis: ");
+    console.log("li: ", li);
+    // TODO: This isn't filtering the list as it should:
+    li != "sam";
+    console.log("li !== 'sam': ", li !== 'sam');
+  });
+
+  console.log("filteredLikeLis AFTER .filter(): ", filteredLikeLis);
+
+  filteredLikeLis.push(newUsername);
+
+  console.log("filteredLikeLis AFTER .push(): ", filteredLikeLis);
+
+  // Blank out the existing 'usersListUl':
+  usersListUl.innerHTML = '';
+
+  // Cycle through 'filteredLikeLis' and add them back to the DOM:
+  filteredLikeLis.forEach((li) => {
+    let newUserLi = document.createElement("li");
+    newUserLi.textContent = li;
+    usersListUl.append(newUserLi);
+  });
 
   // Change the 'likeButton' element's text to 'UNLIKE' or 'UNLIKE' accordingly:
   if (likeButton.textContent === "LIKE") {
@@ -179,58 +193,20 @@ function likeButtonClick(e) {
     .then((obj) => {
       console.log("obj from likeButtonClick() function: ", obj);
       let usersArray = obj["users"];
-      console.log("usersArray within fetch() method: ", usersArray);
+      console.log("usersArray within fetch() method for specific book id within likeButtonClick() function: ", usersArray);
       // Create a new 'users' based object, and add it to 'usersArray', so we can pass the new 'usersArray' object into the fetch() call via the 'PATCH' method:
       let newUserObj = {};
       newUserObj.id = 11;
       newUserObj.username = newUsername;
-      // If 'sam' is already present as a user, rip that object out of the array:
+
+      console.log("usersArray BEFORE .forEach() loop", usersArray);
+
+      usersArray.push(newUserObj);
       console.log("usersArray: ", usersArray);
-      console.log("typeof(usersArray): ", typeof(usersArray));
 
-      // Accounting for edge case where usersArray is only an object of 1 user which I will then create a corresponding array for:
-      if (!usersArray.length) {
-        console.log("usersArray is NOT an array, creating an array...");
+      console.log("2");
 
-        let newArray = [];
-        newArray.push(usersArray);
-        usersArray = newArray;
-
-        usersArray.forEach((user) => {
-          // Do NOT allow the 'newUsername' to be used twice:
-          if (!user.name === newUsername) {
-            // Append to DOM:
-            let userLi = document.createElement("li");
-            let username = user.username;
-            userLi.textContent = username;
-            usersListUl.append(userLi);
-            // Push 'newUserObj' to 'usersArray':
-            usersArray.push(newUserObj);
-          }
-        });
-
-        console.log("usersArray after creating a new array: ", usersArray);
-      }
-
-      // Otherwise, we are dealing with an array, so loop through it, and add it to the DOM:
-      else if (usersArray.length) {
-        console.log("usersArray IS an array, adding new user to it...");
-        console.log("usersArray.length: ", usersArray.length);
-        usersArray.forEach((user) => {
-          // Do NOT allow the 'newUsername' to be used twice:
-          if (!user.name === newUsername) {
-            // Append to DOM:
-            let userLi = document.createElement("li");
-            let username = user.username;
-            userLi.textContent = username;
-            usersListUl.append(userLi);
-            // Push 'newUserObj' to 'usersArray':
-            usersArray.push(newUserObj);
-          }
-        });
-      }
-
-      console.log("usersArray within fetch() with PATCH method: ", usersArray);
+      console.log("usersArray before fetch() with PATCH method: ", usersArray);
 
       // Add a fetch() call to update the appropriate item in the 'books' array within 'db.json':
       fetch(`http://localhost:3000/books/${bookId}`, {
